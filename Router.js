@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import { HomeScreen } from './src/screens'
+import { HomeScreen } from './src/screens';
 
-import constants from './src/utils/constants'
+import constants from './src/utils/constants';
 
 const Stack = createStackNavigator();
 
@@ -13,6 +13,12 @@ const Router = () => {
         <NavigationContainer>
             <Stack.Navigator 
                 initialRouteName={constants.SCREEN.HOME}
+                screenOptions={{
+                    headerStyle: {
+                        backgroundColor: "red",
+                        textSize: "60px",
+                    }
+                }}
             >
                 <Stack.Screen 
                     name={constants.SCREEN.HOME} 
@@ -27,4 +33,4 @@ const Router = () => {
     )
 }
 
-export default Router
+export default Router;

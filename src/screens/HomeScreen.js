@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react'
-import { View, StyleSheet, SafeAreaView, FlatList } from 'react-native'
+import { View, StyleSheet, SafeAreaView, FlatList, Text } from 'react-native'
 
 import axios from '../utils/axios'
 
 import Amiibo from '../components/Amiibo'
+import constants from '../utils/constants'
 
 export const HomeScreen = ({ navigation }) => {
 
@@ -22,8 +23,14 @@ export const HomeScreen = ({ navigation }) => {
     
 
     return (
-        <SafeAreaView>
+        <SafeAreaView style={styles.container}>
+
+            <View style={styles.titleContainer}>
+                <Text style={styles.title}>AMIIBOS</Text>
+            </View>
+
             <FlatList
+                style={styles.list}
                 data={amiibos}
                 renderItem={({ item }) => <Amiibo amiibo={item} navigation={navigation}/>}
                 keyExtractor={(item) => `${item.tail}`}
@@ -34,5 +41,21 @@ export const HomeScreen = ({ navigation }) => {
 }
 
 const styles = StyleSheet.create({
-    
+    container: {
+        flexDirection: 'column',
+        backgroundColor: constants.COLORS.PRIMARY,
+        alignItems: 'center'
+    },
+    titleContainer:{
+        
+    },
+    title: {
+        color: constants.COLORS.LIGHT,
+        fontSize: 20,
+        fontWeight: 'bold',
+    },
+    list: {
+        paddingHorizontal: 25,
+
+    }
 });

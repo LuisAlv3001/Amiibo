@@ -5,6 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { HomeScreen } from './src/screens';
 
 import constants from './src/utils/constants';
+import DetailsScreen from './src/screens/DetailsScreen';
 
 const Stack = createStackNavigator();
 
@@ -28,6 +29,17 @@ const Router = () => {
                         headerShown: false,
                     }}
                 />
+               
+                <Stack.Screen 
+                    name={constants.SCREEN.DETAILS} 
+                    component={DetailsScreen} 
+                    options = {{
+                        title: 'Details',
+                        headerShown: false,
+                    }}
+                />
+
+                
             </Stack.Navigator>
         </NavigationContainer>
     )

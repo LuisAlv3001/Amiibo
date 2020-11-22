@@ -6,10 +6,15 @@ const Amiibo = ({ amiibo, navigation }) => {
 
     const {amiiboSeries, character, gameSeries, image, name} = amiibo;
 
+
+    const loadDetails = () => {
+		navigation.navigate(constants.SCREEN.DETAILS, { amiibo });
+	};
+
     return (
 
 
-        <Pressable style={styles.card}>
+        <Pressable style={styles.card} onPress={loadDetails}>
 
             <Image
 				resizeMode="cover"

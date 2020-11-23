@@ -16,7 +16,7 @@ const Router = () => {
                 initialRouteName={constants.SCREEN.HOME}
                 screenOptions={{
                     headerStyle: {
-                        backgroundColor: "red",
+                        //backgroundColor: "red",
                         textSize: "60px",
                     }
                 }}
@@ -35,7 +35,7 @@ const Router = () => {
                     component={DetailsScreen} 
                     options = {{
                         title: 'Details',
-                        headerShown: false,
+                        //headerShown: false,
                     }}
                 />
 

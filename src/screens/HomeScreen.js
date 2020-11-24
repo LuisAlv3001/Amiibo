@@ -28,9 +28,7 @@ export const HomeScreen = ({ navigation }) => {
     return (
         <SafeAreaView style={styles.container}>
 
-            <View style={styles.titleContainer}>
-                <Image style={styles.image} source={require('../img/Amiibo_logo.png')}></Image>
-            </View>
+            <Image style={styles.image} source={require('../img/Amiibo_logo.png')}></Image>
 
             <FlatList
                 style={styles.list}

@@ -14,12 +14,6 @@ const Router = () => {
         <NavigationContainer>
             <Stack.Navigator 
                 initialRouteName={constants.SCREEN.HOME}
-                screenOptions={{
-                    headerStyle: {
-                        //backgroundColor: "red",
-                        textSize: "60px",
-                    }
-                }}
             >
                 <Stack.Screen 
                     name={constants.SCREEN.HOME} 
@@ -33,9 +27,10 @@ const Router = () => {
                 <Stack.Screen 
                     name={constants.SCREEN.DETAILS} 
                     component={DetailsScreen} 
-                    options = {{
-                        title: 'Details',
-                        //headerShown: false,
+                    options={{ 
+                        title: '',
+                        headerBackTitleVisible: false,
+                        headerTransparent: true,
                     }}
                 />
 

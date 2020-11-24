@@ -23,10 +23,7 @@ const Amiibo = ({ amiibo, navigation }) => {
                 source={image}
             />
             <View style={styles.cardName}>
-                
-                <View>
-                    <Text style={styles.name}>{name}</Text>
-                </View>
+                <Text style={styles.name}>{name}</Text>
             </View>
         </Pressable>
     )
@@ -62,7 +59,7 @@ const styles = StyleSheet.create({
         left: 30,
         borderBottomEndRadius: 10,
         borderTopStartRadius: 10,
-        backgroundColor: constants.COLORS.PRIMARY,
+        backgroundColor: '#009582',
         justifyContent: 'center',
     }
 });
